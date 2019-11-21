@@ -1,0 +1,47 @@
+\section{Zielsetzung}
+\label{sec:Zielsetzung}
+In diesem Versuch werden verschiedene Schwingungsformen aus Sinus- und Cosinus-Thermen zusammengesetzt, sowie periodische Schwingungen in ihre Fourier-Komponenten zerlegt. Jede periodische Funktion lässt sich als Summe aus Sinus- und Cosinus-Thermen darstellen.
+\section{Theorie}
+\label{sec:Theorie}
+Periodische Funktionen, die nach einem Zeitraum $T$ oder nach der Distanz $D$ zu ihren Ausgangswert zurückkehren und den Ablauf wiederholen, werden beschrieben als:
+\begin{align*}
+f(t+T) &= f(t) \\
+f(x+D) &= f(x).
+\end{align*}
+Sie besitzen einen periodisch zeitlichen als auch einen periodisch räumlichen Vorgang. Dies können nur Sinus- oder Cosinusfunktionen sein. Die beiden Funktionen mit einer Periodendauer $T$ und einer Amplitude $a$ bzw. $b$ werden dargestellt als:
+\begin{align}
+\label{algn:Funktionen}
+f(t) &= a \text{sin} (\frac{2\pi }{T}t) \\
+f(t) &= b \text{cos} (\frac{2 \pi }{T}t).
+\end{align}
+Mit Hilfe dieser beiden Funktionen werden alle anderen periodischen Vorgänge in der Natur beschrieben.
+Das Fouriersche Theorem besagt, dass sich eine Funktion $f(t)$ der Periode $T$ darstellen lässt als:
+\begin{equation}
+\label{eqn:FourierTheorem}
+f(t) = \frac{a_0}{2} + \sum_{n=1}^\infty \left(a_n \cos\left(n\frac{2\pi}{T}t\right) + b_n \sin\left(n\frac{2\pi}{T}t\right)\right).
+\end{equation}
+solange diese Reihe gleichmäßig konvergiert. Die Koeffizienten $a_{n}$ und $b_{n}$ berechnen sich gemäß:
+\begin{equation}
+a_n = \frac{2}{T} \int_{0}^{T} f(t) \text{cos}\left(n \frac{2 \pi}{T} t \right) dt 
+\end{equation}
+und
+\begin{equation}
+b_n = \frac{2}{T} \int_{0}^{T} f(t) \text{sin}\left(n \frac{2 \pi}{T} t \right) dt 
+\end{equation}
+mit $n = 1,2,...$
+Es treten als Frequenz somit nur ganzzahlige Vielfache der Grundfrequenz auf:
+\begin{equation*}
+\nu = \frac{1}{T}.
+\end{equation*}
+Dies werden auch als harmonische Oberschwingungen bezeichnet. In \ref{eqn:FourierTheorem} können nur die Phasen $0$, $\pi$, $\frac{\pi}{2}$ und $\frac{3\pi}{2}$ vorkommen.
+Wenn die Fourierkoeffizienten $a_{n}$ und $b_{n}$ als Funktion gegen die Frequenzspektrum aufgetragen werden, was die Amplituden der Oberschwingungen darstellt, ergibt sich das jeweilige Frequenzspektrum. Dies ist in der Abbildung \ref{fig:linienspektrum} zu sehen. Dieses ist bei periodischen Funktionen ein Linienspektrum, dessen Amplituden mit steigender Frequenz sinken. Bei nichtperiodischen Funktionen ergibt sich ein kontinuierliches Spektrum. Diese Koeffizienten werden bei der Fourier-Analyse gesucht.
+Wenn in der Gleichung \ref{eqn:FourierTheorem} Unstetigskeitsstellen auftreten, so lässt sich die Funktion an den Stellen nicht approximieren und ergeben sich Abweichungen, die mit steigender Anzahl von Oberschwingungsthermen nicht geringer wird. Dieses wird als Gibbsches Phänomen bezeichnet. 
+Mit Hilfe einer Fourier-Transformation ist es möglich das gesamte Spektrum einer zeitabhängigen Funktion zu ermitteln. Die Funktion ist gegeben als:
+\begin{equation}
+g(\nu) = \int_{-\infty}^{\infty} f(t) e^{i \nu t} dt
+\end{equation}
+wobei $g_{\nu}$ das Frequenz der Spektrum darstellt. $g_{\nu}$ besteht aus einer (konvergierenden) Reihe von $\delta$-Funktionen. Die Umkehrfunktion lässt sich schreiben als:
+\begin{equation*}
+f(t) = \frac{1}{2 \pi} \int_{-\infty}^{\infty} g(\nu) e^{-i \nu t}dt.
+\end{equation*} 
+In diesem Fall ist es praktisch nicht möglich über unendliche Zeiträume zu integrieren, denn es treten Abweichungen für die exakten Ergebnissen auf. Die Funktion wird also nur für einen endlichen Zeitraum betrachtet. Dafür ergibt sich ein Linienspektrum mit Linien endlicher Breite. $g$ besitzt keine $\delta$-Funktionen mehr sondern nur stetig und differenzierbare Funktionen und es bilden sich Nebenmaxima aus.

@@ -1,0 +1,57 @@
+\section{Zielsetzung}
+Das Ziel des Versuchs ist auf drei experimentelle Arten das magnetische Moment eines Permanentmagneten auszurechnen und diese anschließend zu vergleichen. 
+\section{Theorie}
+In dem Magnetismus wird die einfachste Form eines magnetischen Dipols beobachtet. Es gibt keine magnetischen Monopole.
+Ein magnetischer Dipol besteht aus einem Permanentmagneten oder kann z.B. vom Strom durch Leiter durchflossen sein. 
+Das magnetische Moment ist gegeben durch:
+\begin{equation}
+\vec{\mu}=I\cdot\vec{A}
+\end{equation}
+wobei $A$ die Querschnittsfläche der Schleife und $I$ der Strom, der durch die Leiterschleife fließt, sind.
+Für ein homogenes Magnetfeld werden in der Regel Helmholtz-Spulen verwendet. Es sind zwei kreisförmige Spulen, vom Strom $I$ durchflossen und so angeordnet, dass das Magnetfeld $B$ im Zentrum der beiden entstehen kann. 
+Das Magnetfeld errechnet sich dann aus:
+\begin{equation}
+B=\frac{\mu_{0}\cdot I\cdot R^{2}}{(R^{2}+x^{2})^{3/2}}.
+\label{eq:flussdichte}
+\end{equation}
+\subsection{Betrachtung unter Ausnutzung der Gravitation}
+Wird eine Masse mit der Gravitationskraft $\vec{F}_{g}$ an einem Drehort befestigt, so ergibt sich ein Drehmoment $\vec{D}_{\text{g}}$ mit:
+\begin{equation}
+\vec{D}_{\text{g}}=m\cdot(\vec{r}\times\vec{g})
+\end{equation}
+wobei $\vec{r}$ der Abstand von der Masse $m$ zum  Angriffspunkt der Kraft ist.
+Es entsteht ein Gleichgewicht,zwischen dem Drehmoment $\vec{D}_{\text{g}}$ und dem Drehmoment $\vec{D}_{\text{B}}$ eines homogenen Magnetfeldes gegeben als:
+\begin{equation}
+\vec{D}_{B}= \vec{\mu}_{\text{Dipol}} \times \vec{B}
+\end{equation}
+Weil $g$ und $B$ parallel sind, ergibt sich das magnetische Moment ${\mu_{\text{Dipol}}}$ als:
+\begin{equation}
+\mu_{\text{Dipol}}=\frac{m\cdot r\cdot g}{B}.
+\label{eq:udipol}
+\end{equation}
+\subsection{Betrachtung unter Ausnutzung der Schwingungsdauer}
+In einem homogenen Magnetfeld wird die Schwingung eines Magneten wie ein harmonischer Oszillator betrachtet. Dabei wird diese Bewegung gegeben durch eine Differentialgleichung $2$. Ordnung und lautet:
+\begin{equation}
+-\vert\vec{\mu}_{\text{Dipol}}\times\vec{B}\vert = J_{K} \cdot \frac{d^{2}\theta}{dt^{2}}.
+\end{equation} 
+Dabei hängt die Lösung der Differentialgleichung von der Magnetfeldstärke $B$, dem Trägheitsmoment $J_{\text{K}}$ ab und wird über die Schwingungsdauer $T$ bestimmt als:
+\begin{equation}
+T^{2}=\frac{4\pi^{2}J_{K}}{B\mu_{\text{Dipol}}}.
+\label{eq:Schwingungsdauer}
+\end{equation}
+\subsection{Betrachtung unter Ausnutzung der Präzession}
+Als Präzessionbewegung bezeichnet man die Bewegung der Drehachse eines starren Körpers auf eine zweite Achse, wenn eine äußere Kraft wirkt. Diese Art von Bewegung wird durch eine Differentialgleichung beschrieben als:
+\begin{equation}
+\vec{\mu} \times \vec{B} = \frac{d\vec{L}_{K}}{dt}
+\end{equation}  
+Mit der Präzessionsfrequenz $\Omega_{\text{p}}$ als Lösung der Differentialgleichung:
+\begin{equation}
+\Omega_{\text{p}}=\frac{\mu B}{\vert L_{K} \vert}
+\end{equation}
+wobei $L_{\text{K}}$ der Drehimpuls des Körpers ist.
+Für diesen Fall ergibt sich für das magnetische Moment $\mu_{\text{Dipol}}$:
+\begin{equation}
+\mu_{\text{Dipol}}=\frac{2\pi L_{K}}{BT_{p}}.
+\label{eq:Präzession}
+\end{equation}
+mit $T_{\text{p}}$ als Umlaufdauer.

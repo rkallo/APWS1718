@@ -1,0 +1,15 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {german}
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Allgemeine Relaxationsgleichung und Anwendung auf den RC-Kreis}{3}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Entladevorgang}{4}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Aufladevorgang}{4}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Relaxationserscheinungen bei periodischer Auslenkung aus der Gleichgewichtslage}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Der RC-Kreis als Integrator}{6}{subsection.2.3}
+\contentsline {section}{\numberline {3}Durchführung}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Bestimmung der Zeitkonstanten}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Messung der Amplitude in Abhängigkeit von der Frequenz}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Messung der Phasenverschiebung in Abhängigkeit von der Frequenz}{7}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}RC-Kreis als Integrator}{8}{subsection.3.4}

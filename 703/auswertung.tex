@@ -1,0 +1,249 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+\subsection{Bestimmung der Steigung des Plateau-Bereichs}
+
+In der Tabelle \ref{tab:plateau} befinden sich die gemessenen Werte. Der absolute Fehler für N Entladungen ergibt sich über:
+\begin{equation}
+\label{eqn:absoluterfehler}
+\sigma_\text{N} = \sqrt{N}
+\end{equation}
+und für die Impulsrate:
+\begin{equation}
+Z = \frac{N}{T}
+\end{equation} 
+ergibt sich dann:
+\begin{equation}
+\label{eq:sigmaz}
+\sigma_\text{Z} = \frac{\sqrt{N}}{T},
+\end{equation}
+da die Anzahl von Zerfällen poissonverteilt ist. 
+
+Die aufgeführten Werte mit Fehlern aus der Tabelle \ref{tab:plateau} und die Ausgleichsgerade werden in die Abbildung \ref{fig:plateau} graphisch eingetragen. Zur Bestimmung der Ausgleichsgerade des Plateau-Bereichs werden die Werte ab $\SI{320}{\volt}$ bis $\SI{700}{\volt}$ verwendet. Dabei werden die Impulse in die Impulserate umgerechnet und gegen die anliegende Spannung aufgetragen(s.Abb.\ref{fig:plateau}). Die ersten zwei Werte aus der Tabelle werden nicht betrachtet, da sie sich noch nicht im Geiger-Müller-Plateau befinden.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../../Plateau}
+	\caption{Aufgenommenen Werte zur Charakteristik des Zählrohres mit Fehlern und Plateaugerade.}
+	\label{fig:plateau}
+\end{figure}
+
+Eine lineare Ausgleichsgerade lässt sich berechnen wie:
+\begin{equation}
+\label{eq:ausgleichsgerade}
+y = mx + b
+\end{equation}
+wobei $m$ die Steigung und $b$ der y-Achsenabschnitt sind. Über Formel \ref{eq:ausgleichsgerade} wird die Steigung und der Fehler der Ausgleichsgerade vom Python-Modul Scipy curve\_fit berechnet.
+Es ergaben sich für die Ausgleichsgerade $m$ als Steigung und $b$ als y-Achsenabschnitt die folgenden Werte:
+\begin{align*}
+m &= \SI{0,052 \pm 0,006}{\frac{1}{\volt\second}} \\
+b &= \SI{174,3 \pm 3,33}{\frac{1}{\second}}
+\end{align*}
+und die Plateau-Steigung wird in $\si{\percent}$ pro $\SI{100}{\volt}$ angegeben:
+\begin{equation*}
+m = \SI{2,2 \pm 1,7}{\percent} \text{pro 100V}.
+\end{equation*}
+
+\begin{table}[htpb]
+	\centering
+	\caption{Messdaten zur Charakteristik des Zählrohres.}
+	\label{tab:plateau}
+	\begin{tabular}{c c c c c c}
+		\toprule
+		$U / \si{\volt}$ & $N / \si{\frac{1}{\text{min}}}$ & $I / \si{\micro\ampere}$ & $T / \si{\second}$ & $\sigma_\text{N} $ & $\sigma_Z / \si{\frac{1}{\second}}$ \\
+		\midrule
+	     320 &	11428&	0,1	&60&	107	&1,8 \\
+	     330&	11709&	0,2	&60	&108	&1,8\\
+	     340&	11461&	0,25&	60&	107	&1,8\\
+	     350&	11600&	0,3&	60&	108	&1,8\\
+	     360&	11597&	0,35&	60&	108	&1,8\\
+	     370&	11804&	0,4&	60	&109&1,8\\
+	     380&	11843&	0,4	&60	&109	&1,8\\
+	     390&	11946&	0,45&	60&	109 &1,8\\
+	     400&	11731&	0,5	&60	&108    &1,8\\
+	     410&	11755&	0,55&	60&	108  &1,8\\
+	     420&	11839&	0,6	&60	&109		&1,8\\
+	     430&	11814&	0,65&	60&	109	&1,8\\
+	     440&	11999&	0,7	&60	&110		&1,8\\
+	     450&	11960&	0,75&	60&	109	&1,8\\
+	     460&	11923&	0,8	&60&	109   &1,8\\
+	     470&	12153&	0,85	&60&110&1,8\\
+	     480&	11970&	0,85	&60&109&1,8\\
+	     490&	11949&	0,9&	60	&109&1,8\\
+	     500&	11875&	1&	60	&109&1,8\\
+	     510&	11932&	1,05&	60&	109&1,8\\
+	     520&	11928&	1,1	&60	&109&1,8\\
+	     530&	11954&	1,1	&60	&109&1,8\\
+	     540&	12090&	1,2	&60	&110&1,8\\
+	     550&	12158&	1,25&	60&	110&1,8\\
+	     560&	11941&	1,3	&60	&109&1,8\\
+	     570&	12040&	1,3&	60	&110&1,8\\
+	     580&	12009&	1,3	&60	&110&1,8\\
+	     590&	11995&	1,3	&60	&1110&1,8\\
+	     600&	11952&	1,4	&60	&109&1,8\\
+	     610&	12129&	1,45&	60&	110,&1,8\\
+	     620&	12003&	1,5	&60	&110&1,8\\
+	     630&	12516&	1,5	&60	&112&1,9\\
+	     640&	12263&	1,55&	60&	111&1,8\\
+	     650&	12324&	1,6	&60&	111&1,9\\
+	     660&	12584&	2	&60&	112&1,9\\
+	     670&	12692&	1,8	&60&	113&1,9\\
+	     680&	12911&	1,8	&60&	114&1,9\\
+	     690&	13075&	2	&60&	114&1,9\\
+	     700&	13765&	2,1	&60&	117&2,0\\	     
+	\end{tabular}
+\end{table}
+
+\subsection{Bestimmung der Totzeit}
+\subsubsection{Mit dem Oszilloskop}
+
+Für die erste Methode zur Bestimmung der Totzeit wird das Ablesen auf dem Oszilloskop benötigt. Diese Messung wird gemäß Abbildung \ref{fig:zeiten} durchgeführt und die aufgeführten Messwerte wie die Spannung $U$, die Totzeit $T$ und Erholungszeit $T_\text{E}$ befinden sich in der Tabelle \ref{tab:erstemethode}.
+
+\begin{table}[htpb]
+	\centering
+	\caption{Messwerte zur ersten Methode für die Bestimmung der Totzeit.}
+	\label{tab:erstemethode}
+	\begin{tabular}{c c c}
+		\toprule
+		$U / \si{\volt}$ & $T / \si{\micro\second}$ & $T_\text{E} / \si{\micro\second}$ \\
+		\midrule
+		460 & 250 & 490 \\
+		500 & 270 & 430 \\
+		550 & 275 & 480 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Der Mittelwert $\bar{x}$ aus $n$ Stichproben $x_{i}$ ergibt sich aus:
+\begin{equation}
+\bar{x}=\frac{1}{n}\sum \limits_{i=1}^n x_{i}
+\label{eq:mittelwert}
+\end{equation}
+Die Standardabweichung errechnet sich nach:
+\begin{equation}
+\label{eq:standardab}
+s_{i}= \sqrt{\frac{1}{n-1}\sum \limits_{i=1}^n(x_{i}-\bar{x})^2}
+\end{equation}
+mit zufälligen Fehlern behafteten Werten $x_{i}$ mit $i$ = 1,...,n.\\
+Der aus der Standardabweichung aus der Gleichung \ref{eq:standardab} resultierende Fehler des Mittelwertes ergibt sich nach:
+\begin{equation}
+\Delta\bar{x}=\frac{s_{i}}{\sqrt{n}} = \sqrt{\frac{\sum\limits_{i=1}^n(x_{i}-\bar{x})^2}{n(n-1)}}
+\label{eq:fehlermittelwert}
+\end{equation}
+
+Mit der Gleichung \ref{eq:mittelwert} und \ref{eq:fehlermittelwert} soll nun der Mittelwert sowie der Fehler des Mittelwerts der Totzeit und Erholungszeit bestimmt werden und es ergeben sich die folgenden Werte:
+\begin{align*}
+T_\text{tot1} &= \SI{265 \pm 7}{\micro\second} \\
+T_\text{E} &= \SI{466,6 \pm 18,5}{\micro\second}.
+\end{align*}
+
+\subsubsection{Mit der Zwei-Quellen-Methode}
+Zur zweiten Methode für die Bestimmung der Totzeit ergaben sich bei einer Spannung $U$ von $\SI{500}{\volt}$ die in Tabelle \ref{tab:zweitemethode} aufgeführten Werte. Die Totzeit wird nun nach der Gleichung \ref{eq:totzeit} berechnet und der Fehler wird nach Gaußscher Fehlerfortpflanzung \ref{eqn:gauß} gegeben:
+
+\begin{equation}
+\label{eqn:gauß}
+\sigma_T = \sqrt{ \left(\frac{N_{1+2}-N_{2}}{2N_{1}^{2}N_{2}}\right)^2 \cdot \sigma_{N_{1}}^2+ \left(\frac{N_{1+2}-N_{1}}{2N_{1}N_{2}^{2}}\right)^2 \cdot \sigma_{N_{2}}^2+\left(\frac{1}{2N_1N_2}\right)^2 \cdot \sigma_{N_{1+2}}^2} 
+\end{equation}
+
+Damit ergibt sich für die Totzeit der folgende Wert:
+\begin{equation*}
+T_\text{tot2} = \SI{932,2 \pm 92,1}{\micro\second}.
+\end{equation*}
+
+\begin{table}[htpb]
+	\centering
+	\caption{Messwerte zur zweiten Methode für die Bestimmung der Totzeit.}
+	\label{tab:zweitemethode}
+	\begin{tabular}{c c c c c c}
+		\toprule
+		Quellen & $U / \si{\volt}$ & $N / \si{\frac{1}{\second}}$ & $\sigma_\text{Z} / \si{\frac{1}{\second}}$ & $\sigma_\text{N}$ & $T / \si{\second}$ \\
+		\midrule
+		1& 500 & 12120 & 1,83 & 110,1 & 60 \\
+		1+2 & 500 & 13038 & 1,90 & 114,18 & 60 \\
+		2 & 500 & 1186 & 0,57 & 34,43 & 60 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsection{Bestimmung der Ladung pro einfallendem Teilchen}
+Die Ladungsmenge, welche durch ein Teilchen freigesetzt wird, hängt vom gemessenen Strom ab. Dieser ist in Tabelle \ref{tab:plateau} bereits eingeführt worden. 
+
+Die Ladung $Q$ pro Teilchen ergibt sich durch Gleichung \ref{eq:ladung}, die nach der Ladung $Q$ umgestellt wird:
+\begin{equation}
+Q = \frac{I \cdot T}{N}
+\end{equation}
+wobei $Z$ die Impulsrate, $T$ die Messzeit und $I$ die Stromstärke sind. Die Fehler der Ladung berechnet sich wie folgt:
+\begin{equation}
+\label{eq:fehlerladung}
+\sigma_{Q} = Q \cdot \frac{\sigma_Z}{N}
+\end{equation}
+Die Abweichung für die Ladung errechnet sich nach:
+\begin{equation}
+\sigma_{Q1} = \SI{6,24 e18}{\electronvolt}\cdot \sigma_{Q}
+\end{equation}
+Es lässt sich ein linearer Zusammenhang zwischen der angelegten Spannung $U$ und Ladung $Q$ pro im Zählrohr einfallendem Teilchen feststellen. Dieser Zusammenhang inklusive der Ausgleichsgerade ist in Abbildung \ref{fig:ladung} dargestellt. 
+
+Über Formel \ref{eq:ausgleichsgerade} wird die Steigung und der Fehler der Ausgleichsgerade vom Python-Modul Scipy curve\_fit berechnet.
+Es ergaben sich für die Ausgleichsgerade $m$ als Steigung und $b$ als y-Achsenabschnitt die folgenden Werte:
+\begin{align*}
+m &= \SI{0,138 \pm 0,002 e9}{\frac{\elementarycharge}{\volt}} \\
+b &= -\SI{39,09 \pm 1,35 e9}{\elementarycharge}.
+\end{align*}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../../Ladung}
+	\caption{Ausgleichsgerade zur Bestimmung der Ladung mit den zugehörigen Fehlern.}
+	\label{fig:ladung}
+\end{figure}
+
+\begin{table}[htpb]
+	\centering
+	\caption{Messdaten zur Charakteristik des Zählrohres.}
+	\label{tab:ladung}
+	\begin{tabular}{c c c c c c c c c c}
+		\toprule
+		$U / \si{\volt}$ & $N / \si{\frac{1}{\second}}$ & $I / \si{\micro\ampere}$ & $T / \si{\second}$ & $Z / \si{\frac{1}{\second}}$ & $\sigma_\text{Z} / \si{\frac{1}{\second}}$ & $Q / \SI{e-9}{\coulomb}$ & $\sigma_{Q} / \SI{e-9}{\coulomb}$ & $Q / \SI{e9}{\elementarycharge}$ & $\sigma_{Q1} / \SI{e9}{\elementarycharge}$ \\
+		\midrule
+		320	&11428&	0,1 &60&190,4&1,8&5,25&0,000081&3,2&0,00051 \\
+		330	&11709&	0,2	&60&195,1&1,8&1,02&0,00015&6,3&0,00098 \\
+		340	&11461&	0,25&60&191,1&1,8&1,30&0,00020&8,1&0,0012\\
+		350	&11600&	0,3	&60&193,3&1,8&1,55&0,00024&9,6&0,0014\\
+		360	&11597&	0,35&60&193,3&1,8&1,81&0,00028&11,3&0,0017\\
+		370	&11804&	0,4	&60&196,7&1,8&2,03&0,00031&12,6&0,0019\\
+		380	&11843&	0,4	&60&197,4&1,8&2,02&0,00031&12,6&0,0019\\
+		390	&11946&	0,45&60&199,1&1,8&2,26&0,00034&14,1&0,0021\\
+		400	&11731&	0,5	&60&195,5&1,8&2,55&0,00039&15,9&0,0024\\
+		410	&11755&	0,55&60&195,9&1,8&2,80&0,00043&17,5&0,0026\\
+		420	&11839&	0,6	&60&197,3&1,8&3,04&0,00046&18,9&0,0029\\
+		430	&11814&	0,65&60&196,9&1,8&3,30&0,00050&20,6&0,0031\\
+		440	&11999&	0,7	&60&199,9&1,8&3,50&0,00053&21,8&0,0033\\
+		450	&11960&	0,75&60&199,3&1,8&3,76&0,00057&23,4&0,0035\\
+		460	&11923&	0,8	&60&198,7&1,8&4,02&0,00061&25,1&0,0038\\
+		470	&12153&	0,85&60&202,5&1,8&4,19&0,00063&26,1&0,0039\\
+		480	&11970&	0,85&60&199,5&1,8&4,26&0,00064&26,5&0,0041\\
+		490	&11949&	0,9	&60&199,1&1,8&4,51&0,00068&28,2&0,0043\\
+		500	&11875&	1	&60&197,9&1,8&5,05&0,00077&31,5&0,0048\\
+		510	&11932&	1,05&60&198,8&1,8&5,27&0,00084&32,9&0,0050\\
+		520	&11928&	1,1	&60&198,8&1,8&5,53&0,00084&34,5&0,0052\\
+		530	&11954&	1,1	&60&199,2&1,8&5,52&0,00090&34,4&0,0052\\
+		540	&12090&	1,2	&60&201,5&1,8&5,95&0,00093&37,1&0,0056\\
+		550	&12158&	1,25&60&202,6&1,8&6,16&0,00099&38,5&0,0058\\
+		560	&11941&	1,3	&60&199,1&1,8&6,53&0,00098&40,7&0,0062\\
+		570	&12040&	1,3	&60&200,6&1,8&6,47&0,00098&40,4&0,0061\\
+		580	&12009&	1,3	&60&200,1&1,8&6,49&0,00097&40,5&0,0061\\
+		590	&11995&	1,3	&60&199,9&1,8&6,50&0,00098&40,5&0,0061\\
+		600	&11952&	1,4	&60&199,2&1,8&7,02&0,00107&43,8&0,0066\\
+		610	&12129&	1,45&60&202,1&1,8&7,17&0,00108&44,7&0,0067\\
+		620	&12003&	1,5	&60&200,0&1,8&7,49&0,00114&46,8&0,0071\\
+		630	&12516&	1,5	&60&208,6&1,9&7,19&0,00107&44,8&0,0066\\
+		640	&12263&	1,55&60&204,3&1,8&7,58&0,00114&47,3&0,0071\\
+		650	&12324&	1,6	&60&205,4&1,9&7,78&0,00116&48,6&0,0072\\
+		660	&12584&	2	&60&209,7&1,9&9,53&0,00141&59,5&0,0088\\
+		670	&12692&	1,8	&60&211,5&1,9&8,50&0,00125&53,1&0,0078\\
+		680	&12911&	1,8	&60&215,1&1,9&8,36&0,00122&52,1&0,0076\\
+		690	&13075&	2	&60&217,9&1,9&9,17&0,00133&57,2&0,0083\\
+		700	&13765&	2,1	&60&229,4&2,0&9,15&0,00130&57,1&0,0081\\
+		 
+	\end{tabular}
+\end{table}

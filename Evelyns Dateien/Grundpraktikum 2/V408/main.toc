@@ -1,0 +1,7 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {german}
+\contentsline {section}{\numberline {1}Durchführung}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Bestimmung der Brennweite durch Messung der Gegenstandsweite und der Bildweite}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Bestimmung der Brennweite einer Linse nach der Methode von Bessel}{3}{subsection.1.2}
+\contentsline {section}{\numberline {2}Bestimmung der Brennweite eines Linsensystems nach der Methode von Abbe}{4}{section.2}

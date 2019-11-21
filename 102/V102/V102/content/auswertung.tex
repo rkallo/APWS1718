@@ -1,0 +1,92 @@
+\newpage
+\section{Auswertung}
+\label{sec:Auswertung}
+\subsection{Schubmodul}
+\label{sec:Schubmodul}
+Aus den gemessenen Periodendauern $T$ und den Formeln \eqref{eqn:Schubmodul},
+\eqref{eqn:Mittelwert} und \eqref{eqn:Mittelwertfehler}
+lässt sich das mittlere Schubmodul
+\begin{equation*}
+  \overline{G} = \SI{69.7(28)}{\giga\pascal}
+\end{equation*}
+bestimmen. Dabei wurde der gemittelte Drahtdurchmesser nach Formel
+ \eqref{eqn:Mittelwert} und \eqref{eqn:Mittelwertfehler}
+\begin{equation*}
+  \overline{R} = \SI{0.102(1)}{\milli\meter}
+\end{equation*}
+verwendet. Die Masse der Kugel $m_\text{K} = \SI{588.3(2)}{\gram}$ und ihr
+Radius $R_\text{K} = \SI{25.52(1)}{\milli\meter}$ wurden der
+Versuchsapperatur entnommen. Das Trägheitsmomet der Kugelhalterung $\theta_\text{KH}$
+ist auf $\SI{22.5}{\gram\centi\meter\squared}$ gegeben gewesen. Damit ergibt
+sich das Gesamtträgheitsmoment $\theta$ der Kugel und ihrer Halterung zu
+\begin{equation*}
+  \theta = \SI{0.15545(14)}{\gram\meter\squared}.
+\end{equation*}
+Aus dem Schubmodul $G = \SI{69.7(28)}{\giga\pascal}$ und dem gegeben
+Elastizitätsmodul \\
+$E =~\SI{210.0(5)}{\giga\pascal}$,
+sowie der Formel \eqref{eqn:Gauß} lässt sich der Kompressionsmodul
+\begin{equation*}
+  Q = \SI{-10(50)}{\tera\pascal}
+\end{equation*}
+nach Formel \eqref{eqn:Kompressionsmodul} und einsetzen der Formel \eqref{eqn:Querkonstante} bestimmen.
+Desweiteren ergibt sich die Poissonsche Querkonstraktionszahl $\mu$ nach Formel
+\eqref{eqn:Querkonstante} und \eqref{eqn:Gauß} zu
+\begin{equation}
+  \mu = \num{0.51(6)}.
+\end{equation}
+\input{content/Schubmodul.tex}
+\input{content/Drahtdurchmesser.tex}
+
+
+\subsection{Magnetischer Moment}
+\label{sec:MagnetischerMoment}
+In der Abbildung
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{build/TB-Diagramm.pdf}
+  \caption{Das B-Feld des Helmholzspulenpaares gegen $\frac{1}{\overline{T_\text{i}}^2}$ aufgetragen. \cite{matplotlib}}
+  \label{fig:Plot}
+\end{figure}
+\ref{fig:Plot} ist das Magnetfeld des Helmholtzspulen-Paares im Mittelpunkt,
+welches nach
+\begin{equation}
+  B = 4 \cdot \symup{\pi} \cdot 10^{-7} \frac{8 I N}{\sqrt{125} R_\text{SP}}
+  \label{eqn:Helmholtz}
+\end{equation} berechnet wird,
+gegen den Kehrwert der gemittelten und quadrierten Periodendauer
+$\frac{1}{\overline{T_\text{i}}^2}$ aufgetragen, wodurch sich eine Gerade
+ergibt. In der Formel \eqref{eqn:Helmholtz} ist $N = 80$ die Anzahl der Windungen
+der Spulen, $R_\text{SP} = \SI{72}{\milli\meter}$ ist der Radius der Spulen und $I$ der Strom, welcher
+durch die Spulen fließt.
+Die Regression wurde mit curvefit von scipy \cite{scipy} und der Funktion
+\begin{equation*}
+  B = a \cdot \frac{1}{T^2} + b
+\end{equation*}
+durchgeführt. Die Parameter ergeben sich zu
+\begin{align*}
+  a & = \SI{0.0946(29)}{\kilo\gram\per\ampere} & b &= \SI{-0.0002(0)}{\tesla}.
+\end{align*}
+Durch Koeffizientenvergleich mit der umgestellten Formel \eqref{eqn:magPeriode}
+und der Formel \eqref{eqn:Gauß} ergibt sich
+die Bestimmung des magnetischen Moments $m$ des eingeschraubten Magneten zu
+\begin{equation*}
+  m = \frac{4 \symup{\pi}^2 \theta}{a} = \SI{0.65(2)}{\ampere\meter\squared}.
+\end{equation*}
+
+\input{content/MagnetischerMoment1.tex}
+\input{content/MagnetischerMoment2.tex}
+
+\FloatBarrier
+\subsection{Erdmagnetfeld}
+\label{sec:Erdmagnetfeld2}
+Aus den Schwingungsdauern $T$ ohne eingeschaltetem Magnetfeld und dem in Abschnitt
+\ref{sec:MagnetischerMoment} berechneten magnetischen Moments $m = \SI{0.65(2)}{\ampere\meter\squared}$
+lässt sich die horizontal Komponente des Erdmagnetfeldes mit der umgestellten Formel
+\eqref{eqn:magPeriode} und der Formel \eqref{eqn:Gauß} auf
+\begin{equation*}
+  B_\text{h} = \SI{17.5(5)}{\micro\tesla}
+\end{equation*}
+bestimmen.
+
+\input{content/Erdmagnetfeld.tex}

@@ -1,0 +1,15 @@
+
+[all]
+sphinx
+nose
+numpy
+
+[docs]
+sphinx
+
+[optional]
+numpy
+
+[tests]
+nose
+numpy

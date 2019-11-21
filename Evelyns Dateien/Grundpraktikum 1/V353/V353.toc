@@ -1,0 +1,10 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {german}
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Allgemeine Relaxationsgleichung und Anwendung auf den RC-Kreis}{3}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Entladevorgang}{3}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Aufladevorgang}{4}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Relaxationserscheinungen bei periodischer Auslenkung aus der Gleichgewichtslage}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Der RC-Kreis als Integrator}{5}{subsection.2.3}

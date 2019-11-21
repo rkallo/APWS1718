@@ -1,0 +1,70 @@
+\newpage
+\subsection{Dynamische Methode}
+Für die Berechnung des Wärmeleitungskoeffizienten wird die Gleichung
+\begin{equation}
+\kappa = \frac{\rho c (\Delta x)^2}{2\Delta t ln\Bigl(\frac{A_{\text{nah}}}{A_{\text{fern}}}\Bigr)}
+\end{equation}
+genutzt, die dafür benötigten Amplituden sowie die Phasendifferenzen können aus der Wertetabelle des Datenloggers entnommen werden.
+Die Dichte und die Wärmekapazität für Edelstahl werden aus der Versuchsanleitung \cite[3]{anleitung204} übernommen.
+
+\begin{table}[htbp]
+\centering
+\caption{Gemessene Daten - Edelstahlstab}
+\label{tab:some_data}
+\begin{tabular}{S[table-format=2.2] S S[table-format=1.2] S[table-format=2.0]}
+\toprule
+{$A_{\text{nah}}/K$} & {$A_{\text{fern}}/K$} & {ln$\frac{A_{\text{nah}}}{A_{\text{fern}}}$} & {$\Delta t/s$} \\
+\midrule
+19.50 & 4.05 & 1.57 & 76\\
+19.00 & 4.66 & 1.41 & 78 \\
+18.79 & 4.67 & 1.39 & 74 \\
+18.66 & 4.47 & 1.43 & 72 \\
+18.41 & 4.16 & 1.49 & 68 \\
+\bottomrule
+\end{tabular}
+\end{table}
+Es berechnen sich die folgenden Wärmeleitkoeffizienten:
+\begin{equation*}
+\begin{aligned}
+\kappa_1 &= 12.07 \symup{\sfrac{W}{mK}} \\
+\kappa_2 &= 13.09 \symup{\sfrac{W}{mK}} \\
+\kappa_3 &= 14.00 \symup{\sfrac{W}{mK}} \\
+\kappa_4 &= 13.99 \symup{\sfrac{W}{mK}} \\
+\kappa_5 &= 14.21 \symup{\sfrac{W}{mK}} 
+\end{aligned}
+\end{equation*}
+Der Mittelwert wird mit der Gleichung
+\begin{equation}
+\bar{x} = \frac{1}{N} \sum_{\mathclap{i=1}}^N x_{\text{i}}
+\end{equation}
+und der zugehörige Fehler mit 
+\begin{equation}
+\Delta\bar{x} = \frac{1}{\sqrt{N}} \sqrt{\frac{1}{N-1}\sum_{\mathclap{i=1}}^N (x_{\text{i}}-\bar{x})^2}
+\end{equation}
+berechnet. 
+
+Der experimentell gefundene Wärmeleitkoeffizient von
+Edelstahl 
+\begin{equation*}
+\kappa_{\text{Edelstahl}} = (13.472\, \pm \,0.4)\symup{\sfrac{W}{mK}} 
+\end{equation*}
+weicht mit -10.19\% vom Literaturwert von $\Kappa = 15 \symup{\sfrac{W}{mK}}$ ab.
+
+Weiterhin berechnen sich die Wellenlängen mit
+\begin{equation}
+\lambda = \sqrt{\frac{4 \pi \kappa T}{\rho c}.}
+\end{equation}
+Hierbei wurden die Materialkonstanten aus der Versuchsanleitung genommen, die Periodendauer T beträgt 200s. Damit erhält man die 
+folgenden Wellenlängen:
+\begin{equation*}
+\begin{aligned}
+\lambda_1 &= 0.097\symup{m} \\
+\lambda_2 &= 0.1014\symup{m} \\
+\lambda_3 &= 0.1049\symup{m} \\
+\lambda_4 &= 0.1048\symup{m} \\
+\lambda_5 &= 0.1056\symup{m} \\
+\lambda &= (0.1027 \pm 0.0016)\symup{m}
+\end{aligned}
+\end{equation*}
+
+Die Frequenz beträgt zudem $f=\frac{1}{T}=5\cdot 10^{-3} \symup{Hz}$

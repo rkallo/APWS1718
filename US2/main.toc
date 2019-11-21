@@ -1,0 +1,13 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {german}
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}
+\contentsline {section}{\numberline {3}Aufbau und Durchführung}{4}{section.3}
+\contentsline {section}{\numberline {4}Auswertung}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}Untersuchung des Acrylblocks mit dem A-Scan}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Untersuchung des Auflösungsvermögens}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Untersuchung des Acrylblocks mit dem B-Scan}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Bestimmung des Herzzeitvolumens(HZV)}{8}{subsection.4.4}
+\contentsline {section}{\numberline {5}Diskussion}{10}{section.5}
+\contentsline {section}{\nonumberline Literatur}{11}{section*.9}

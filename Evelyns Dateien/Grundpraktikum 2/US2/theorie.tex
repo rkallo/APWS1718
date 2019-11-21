@@ -1,0 +1,69 @@
+\section{Zielsetzung}
+Dieser Versuch beschäftigt sich mit untesrschiedlichen Scanverfahren mittels Ultraschall. Genauer werden mit dem A- und B-Scan die Bohrungen in einem Acrylblock untersucht und die Scanverfahren miteinander verglichen, sowie ein 
+Herzmodell mithilfe des TM-Scans analysiert.
+
+
+
+\section{Theorie}
+In der Physik wird unter Schall eine longitudinale Welle verstanden, die sich durch Druckschwankungen bewegt. Zu unterscheiden ist zwischen Infraschall, dessen Frequenzbereich unter 16\,Hz liegt, dem Hörschall im Bereich von 
+etwa 16\,Hz und 20\,kHz, dem Ultraschall von 20\,kHz bis ca. 1\,GHz und Hyperschall ab 1\,GHz.
+Die Welle hat die Form
+\begin{equation}
+p(x,t) = p_0 + v_0 Z cos(\omega t - kx)
+\end{equation}
+wobei $Z = c\cdot \rho$ als akustische Impedanz bezeichnet wird. Die Dichte $\rho$ und die Schallgeschwindigkeit $c$ machen $Z$ zu einer materialspezifischen Größe, wodurch sich auch die Schallwelle in verschiedenen Materialien 
+unterschiedlich verhält. Während sich Schall in Flüssigkeiten oder Gasen immer longitudinal ausbreitet und im Falle eines flüssigen Mediums von der Dichte $\rho$ und der Kompressibilität $\kappa$ abhängt und die Schallgeschwindigkeit
+
+\begin{equation}
+c_{\text{Fl}} = \sqrt{\frac{1}{\kappa \cdot \rho}}
+\end{equation}
+hat, sind in festen Medien wegen Schubspannungen auch transversale Wellen möglich. Hier spielt das Elastizitätsmodul $E$ eine Rolle:
+
+\begin{equation}
+c_{\text{Fe}} = \sqrt{\frac{E}{\rho}}.
+\end{equation}
+Es gilt, dass Schallgeschwindigkeiten in Festkörpern richtungsabhängig und für longitudinale und transversale Welle verschieden sind.
+Während der Schall durch ein Medium wandert verliert er durch Absorption einen Teil seiner Energie, wodurch die Intensität $I_0$ sinkt:
+
+\begin{equation}
+I(x) = I_0\cdot e^{\alpha x}
+\end{equation}
+$\alpha$ wird Absorptionskoeffizient der Schallamplitude genannt. 
+
+Neben der Absorption sind auch Reflektionen zu beobachten. Diese treten auf, wenn Schallwellen auf die Grenzfläche zweier Medien treffen. Der Reflektionkoeffizient $R$ lässt sich über die akustischen Impedanzen $Z$ der beiden Materialien
+berechnen:
+
+\begin{equation}
+R = \biggl(\frac{Z_1 - Z_2}{Z_1 + Z_2}\biggr)^2
+\end{equation}
+Der transmittierte Anteil $T$ ist damit:
+
+\begin{equation}
+T = 1 - R.
+\end{equation}
+
+Zur Erzeugung von Ultraschallwellen können beispielsweise piezoelektrische Kristalle verwendet werden. In einem elektrischen Wechselfeld beginnen diese zu schwingen, sofern eine der Achsen parallel zum elektrischen Feld ausgerichtet ist.
+Wenn Anregungsfrequenz und Eigenfrequenz des Kristalls zusammenpassen, so können mit der Resonanz große Schwingungsamplituden und Schallenergiedichten erreicht werden. Ebenso ist es möglich den Kristall als Empfänger zu verwenden, der 
+zu schwingen beginnt wenn Schallwellen von außerhalb auf den Kristall treffen. 
+
+Mit Ultraschall können Laufzeitmessungen durchgeführt werden, die Aufschluss über das durchstrahlte Objekt geben. Hierbei gibt es zwei Verfahren:
+
+\begin{itemize}
+  \item Bei dem Durchschallungs-Verfahren werden ein Ultraschallsender und ein Empfänger verwendet. Wenn es in dem durchstrahlten Material eine Fehlstelle gibt, so wird die Intensität durch Absorption abgeschwächt, was mit dem Empfänger 
+  gemessen werden kann. Allerdings ist es mit diesem Verfahren nicht möglich den Ort der Fehlstelle festzustellen.
+  \item Das Impuls-Echo-Verfahren arbeitet mit nur einem Instrument, das sowohl als Sender, als auch als Empfänger eingesetzt wird. Dieses sendet Ultraschallwellen aus, die an der Fehlstelle reflektiert und wieder von der Sonde augenommen
+  werden. Bei diesem Verfahren kann die Lage der Fehlstelle über die Schallgeschwindigkeit $c$ und die Laufzeit $t$ ermittelt werden:
+  
+  \begin{equation}
+  s = \frac{1}{2} c t.
+  \end{equation}
+\end{itemize}
+
+Für Laufzeitdiagramme können drei verschieden Darstellungsarten angewandt werden:
+
+\begin{itemize}
+  \item Beim A-Scan (Amplituden Scan) werden die Echoamplituden gegen die Laufzeit aufgetragen, wodurch sich ein eindimensionales Bild ergibt.
+  \item Beim B-Scan (Brightness Scan) entsteht ein zweidimensionales Bild. Dazu wird die Sonde über das Objekt geführt und aus mehreren eindimensionalen A-Scans wird dann sofort ein B-Bild erstellt. Die Echoamplituden werden hier 
+  über Helligkeitsabstufungen sichtbar gemacht.
+  \item Beim TM-Scan (Time-Motion-Scan) können auch Bewegungen dargestellt werden, indem eine Reihe von Bildern durch schnelles Abtasten aufgenommen werden.
+\end{itemize}

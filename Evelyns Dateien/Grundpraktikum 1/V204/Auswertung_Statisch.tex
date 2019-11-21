@@ -1,0 +1,72 @@
+\section{Auswertung}
+\subsection{Statische Methode}
+
+\begin{table}[htbp]
+\centering
+\caption{Temperaturdifferenzen des breiten Messingstabes ($T_2$-$T_1$), des Aluminium- ($T_6$-$T_5$) und des Edelstahlstabes ($T_7$-$T_8$)}
+\label{tab:some_data}
+\begin{tabular}{S[table-format=3.0] S S S[table-format=1.2]}
+\toprule
+{$t/s$} & {$T_2-T_1/K$} & {$T_6-T_5/K$} & {$T_7-T_8/K$} \\
+\midrule
+100 & 2.24 & 2.80 & 0.59 \\
+200 & 3.88 & 3.34 & 3.48 \\
+400 & 4.48 & 2.97 & 7.35 \\
+600 & 4.37 & 2.59 & 9.05 \\
+700 & 4.29 & 2.47 & 9.56 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{equation*}
+\begin{aligned}
+\Delta x_{\text{Messing}} &= (\num{0.03 +- 0.00})\symup{m} \\
+\Delta x_{\text{Aluminium}} &= (\num{0.03 +- 0.00})\symup{m} \\
+\Delta x_{\text{Edelstahl}} &= (\num{0.03 +- 0.00})\symup{m}
+\end{aligned}
+\end{equation*}
+
+Zur Bestimmung des Wärmestroms $\frac {dQ}{dt}$ werden die folgenden Literaturwerte für die Wärmeleitkoeffizienten der verschiedenen
+Metalle verwendet:
+
+\begin{equation*}
+\begin{aligned}
+\kappa_{\text{Messing}} &= 120 \symup{\sfrac{W}{mK}} \\
+\kappa_{\text{Aluminium}} &= 237 \symup{\sfrac{W}{mK}} \\
+\kappa_{\text{Edelstahl}} &= 15 \symup{\sfrac{W}{mK}}
+\end{aligned}
+\end{equation*}
+
+
+Die Wärmeströme der Metalle für unterschiedliche Zeiten werden nun mit der Gleichung
+
+\begin{equation}
+\frac{dQ}{dt} = -\kappa \cdot A \cdot \frac{\Delta T}{\Delta x} 
+\end{equation}
+
+berechnet. Dabei werden die Werte für die Querschnittsfläche A aus der Versuchsanleitung\cite[3]{anleitung204} entnommen.
+Es ergeben sich die folgenden Werte:
+
+\begin{table}[htbp]
+\centering
+\caption{Wärmeströme von Messing$_{\text{breit}}$, Aluminium und Edelstahl}
+\label{tab:some_data}
+\begin{tabular}{
+S[table-format=3.0] 
+S[table-format=2.2e2, table-auto-round]
+S 
+S[table-format=.3]}
+\toprule
+{t/s} & \multicolumn{3}{S}{$\frac{dQ}{dt}$/W}   \\
+\cmidrule(lr){2-4}
+& {Messing} & {Aluminium} & {Edelstahl} \\
+\midrule
+100 & -7.23e-7 & -1.061 & -0.014 \\
+200 & -1.25e-6 & -1.266 & -0.083 \\
+400 & -1.44e-6 & -1.126 & -0.176 \\
+600 & -1.41e-6 & -0.98 & -0.217 \\
+700 & -1.38e-6 & -0.936 & -0.229 \\
+\bottomrule
+\end{tabular}
+\end{table}
+

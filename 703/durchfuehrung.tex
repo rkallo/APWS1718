@@ -1,0 +1,42 @@
+\section{Aufbau und Durchführung}
+
+Der generelle Aufbau des Geiger-Müller-Zählrohrs wurde bereits im vorherigen Kapitel erläutert. Wie in Abbildung \ref{fig:schaltbild} zu sehen ist, fließt die Ladung $Q$, die sich am Anodendraht sammelt, über den Widerstand $R$ und kann dann über einen 
+Kondensator $C$ und einen Verstärker als Spannungsimpuls gemessen werden. Dieser kann auch über einen Oszillographen dargestellt werden.
+
+\begin{figure}[h!tbp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../../schaltbild}
+	\caption{Skizze der Messapparatur, \cite[7]{anleitung703}.}
+	\label{fig:schaltbild}
+\end{figure}
+
+In diesem Versuch soll zunächst die Charakteristik des Zählrohrs aufgenommen werden. Dazu wird ein $\beta$-Strahler vor dem Zählrohr platziert. In 10\,V-Schritten werden für Spannungen zwischen 300 und 700\,V für jeweils 60\,s die Zählraten gemessen 
+und gegeneinander aufgetragen.
+
+Desweiteren können mithilfe des Oszilloskops die Nachentladungen, die für den Anstieg des Plateaus sorgen, dargestellt werden. Da es aus technischen Gründen nicht möglich ist, die Bilder auf dem Oszilloskop genauer zu analysieren, soll der Verlauf der
+zu beobachtenden Kurve nur qualitativ erklärt werden.
+
+Zudem soll die Totzeit auf zwei verschiedene Weisen gemessen werden. Die erste Messung erfolgt über das Oszilloskop. Dazu wird die Kurve so verschoben, dass mithilfe des Gitters und den Einstellungen am Oszilloskop die Totzeit abgelesen und die 
+Erholungszeit grob abgeschätzt werden kann. Für die andere Methode wird eine zweite Strahlungsquelle eingesetzt, es handelt sich also um die sogenannte Zwei-Quellen-Methode. Die Grundlage hierfür ist wahre Impulsrate $N_{\text{w}}$ der eindringenden und absorbierten
+Teilchen pro Zeiteinheit. Sie ist gegeben durch die registrierte Impulsrate $N_{\text{r}}$. $TN_{\text{r}}$ ist hierbei der Bruchteil der Messzeit, für die das Zählrohr unempfindlich ist:
+
+\begin{equation*}
+N_{\text{w}} = \frac{\text{Impulszahl}}{\text{Messzeit}} = \frac{N_{\text{r}} \cdot t}{(1-TN_{\text{r}})\cdot t} = \frac{N_{\text{r}}}{1-TN_{\text{r}}}
+\label{eqn:impulsrate}
+\end{equation*}
+Im Experiment wird zunächst die Zählrate $N_1$ des ersten Präparats gemessen. Im Anschluss wird ein zweites Präparat hinzugefügt um die Zählrate $N_{1+2}$ beider Präparate zusammen zu messen, wobei darauf geachtet wird, dass das erste Präparat nicht bewegt wird.
+
+Die Totzeit berechnet sich nach:
+\begin{equation}
+\label{eq:totzeit}
+T \approx \frac{N_1 + N_2 - N_{1+2}}{2N_1 N_2}
+\end{equation}
+
+
+Im letzten Teil des Versuchs wird die pro Teilchen am Zählrohr freigesetzte Ladungsmenge untersucht. Es wird der Zählrohrstrom gemessen, welcher die transportierte Ladungsmenge $\Delta Q$ pro Zeitintervall $\Delta t$ repräsentiert, während der $Z$ Teilchen registriert werden:
+
+\begin{equation}
+\label{eq:ladung}
+\bar{I} = \frac{\Delta Q}{\Delta t}\cdot Z.
+\end{equation}
+Dabei soll die Ladung $\Delta Q$ in Abhängigkeit von der Spannung $U$ gemessen werden.

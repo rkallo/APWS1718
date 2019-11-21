@@ -1,0 +1,15 @@
+[0] Config.pm:302> INFO - This is Biber 2.8
+[1] Config.pm:305> INFO - Logfile is 'V107.blg'
+[37] biber-MSWIN32:313> INFO - === 
+[60] Biber.pm:361> INFO - Reading 'V107.bcf'
+[166] Biber.pm:844> INFO - Using all citekeys in bib section 0
+[186] Biber.pm:3971> INFO - Processing section 0
+[202] Biber.pm:4144> INFO - Looking for bibtex format file 'literatur107.bib' for section 0
+[205] bibtex.pm:1449> INFO - Decoding LaTeX character macros into UTF-8
+[210] bibtex.pm:1305> INFO - Found BibTeX data source 'literatur107.bib'
+[233] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[233] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[233] Biber.pm:3799> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[234] Biber.pm:3805> INFO - No sort tailoring available for locale 'de-DE'
+[242] bbl.pm:613> INFO - Writing 'V107.bbl' with encoding 'UTF-8'
+[244] bbl.pm:716> INFO - Output to V107.bbl

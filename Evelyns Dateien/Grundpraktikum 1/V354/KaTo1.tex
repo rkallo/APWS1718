@@ -1,0 +1,45 @@
+\subsection{Zeitabhängigkeit der Amplitude(Aufgabe a)}
+Der Thermodruck mit der eingezeichneten einhüllenden Funktion der abklingenden Amplituden ist in Abbildung \ref{fig:amp} zu sehen.
+
+Die gemessenen Minima und Maxima sind in Tabelle \ref{tab:amp} eingetragen.
+
+Für die Ausgleichsrechnung werden die Beträge der Messwerte verwendet.
+Die exponentielle Ausgleichsrechnung in Abbildung \ref{fig:ampfit} mit der Funktion
+\begin{equation*}
+  A=A_{0} \cdot e^{-2 \pi \mu t}
+\end{equation*}
+mittels Python ergibt
+\begin{align*}
+  A_{0} &= \SI{15.8453818 \pm 0.0382247604}{V} \\
+  \mu &= \SI{910.58084477 \pm 672.139212}{\frac{1}{s}}.
+\end{align*}
+
+Mit Formel \eqref{eqn:mu} wird der effektive Widerstand ermittelt.
+Der Fehler ergibt sich über eine Gauß'sche Fehlerfortpflanzung.
+\begin{equation*}
+  \Delta R_{eff} = \sqrt{ \left( \frac{d R_{eff}}{dL} \right)^2 \cdot (\Delta L)^2 + \left( \frac{d R_{eff}}{d \mu} \right)^2 \cdot (\Delta \mu)^2 }
+\end{equation*}
+Damit ist der experimentelle effektive Dämpfungswiderstand
+\begin{equation*}
+  R_{eff}= \SI{115.6856603 \pm 85.39329297010516}{\symup{\Omega}}.
+\end{equation*}
+Der theoretische Wert des effektiven Dämpfungswiderstands kann nicht genau bestimmt werden, da der Innenwiderstand des Oszilloskops nicht bekannt ist.
+Die Abklingdauer wird über Formel \eqref{eqn:tex} berechnet.
+Der zugehörige Fehler wird mit der Gauß'schen Fehlerfortpflanzung errechnet:
+\begin{equation*}
+  \Delta T_{ex, ex} = \sqrt{ \left( \frac{d T_{ex}}{d \mu} \right)^2 \cdot (\Delta \mu)^2 }
+\end{equation*}
+Somit wird die experimentelle Abklingdauer als
+\begin{equation*}
+  T_{ex, ex}= \SI{0.0001747839788 \pm 0.00012901563488104507}{s}
+\end{equation*}
+bestimmt.
+Der theoretische Wert der Abklingdauer errechnet sich über Formel \eqref{eqn:tex}.
+Der Fehler errechnet sich über die Gauß'sche Fehlerfortpflanzung
+\begin{equation*}
+  \Delta T_{ex, theo}= \sqrt{ \left( \frac{d T_{ex}}{dL} \right)^2 \cdot (\Delta L)^2 + \left( \frac{d T_{ex}}{dR} \right)^2 \cdot (\Delta R)^2}
+\end{equation*}
+Der theoretische Wert der Abklingdauer beläuft sich somit zu
+\begin{equation*}
+  T_{ex, theo}= \SI{0.00042037422037422033 \pm 0.000001523093560047283} \cdot 10^{-7} \si{s}.
+\end{equation*}

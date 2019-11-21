@@ -1,0 +1,15 @@
+[0] Config.pm:302> INFO - This is Biber 2.8
+[1] Config.pm:305> INFO - Logfile is 'V105.blg'
+[38] biber-MSWIN32:313> INFO - === 
+[60] Biber.pm:361> INFO - Reading 'V105.bcf'
+[169] Biber.pm:844> INFO - Using all citekeys in bib section 0
+[188] Biber.pm:3971> INFO - Processing section 0
+[204] Biber.pm:4144> INFO - Looking for bibtex format file 'literatur105.bib' for section 0
+[207] bibtex.pm:1449> INFO - Decoding LaTeX character macros into UTF-8
+[212] bibtex.pm:1305> INFO - Found BibTeX data source 'literatur105.bib'
+[232] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[232] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[232] Biber.pm:3799> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[233] Biber.pm:3805> INFO - No sort tailoring available for locale 'de-DE'
+[241] bbl.pm:613> INFO - Writing 'V105.bbl' with encoding 'UTF-8'
+[242] bbl.pm:716> INFO - Output to V105.bbl
